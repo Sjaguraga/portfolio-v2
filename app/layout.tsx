@@ -2,6 +2,7 @@ import Header from "@/components/header";
 import "./globals.css";
 import { Roboto } from "next/font/google";
 import ActiveSectionContextProvider from "@/context/active-section-context";
+import { Toaster } from "react-hot-toast";
 
 const roboto = Roboto({ weight: "100", subsets: ["latin"] });
 
@@ -25,6 +26,7 @@ export default function RootLayout({
         <ActiveSectionContextProvider>
           <Header />
           {children}
+          <Toaster position="top-right" />
         </ActiveSectionContextProvider>
       </body>
     </html>
